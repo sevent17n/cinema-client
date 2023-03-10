@@ -4,8 +4,7 @@ import Cookies from "js-cookie"
 import { removeTokensStorage } from "@/services/auth/auth.helper"
 import { AuthService } from "@/services/auth/auth.service"
 
-import { API_SERVER_URL, API_URL } from "../config/api.config"
-import { IS_PRODUCTION } from "../config/constants"
+import { API_SERVER_URL, APP_URL } from "../config/api.config"
 
 import { errorCatch } from "./api.helpers"
 
