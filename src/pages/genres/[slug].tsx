@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next"
 import React from "react"
 
 import Catalog from "@/ui/catalog-movies/Catalog"
+import { usePagination } from "@/ui/pagination/usePagination"
 
 import { IGenre, IMovie } from "@/shared/types/movie.types"
 
@@ -15,9 +16,10 @@ interface IGenrePage {
 	genre: IGenre | undefined
 }
 const GenrePage: NextPage<IGenrePage> = ({ movies, genre }) => {
+	const moviePage = usePagination()
 	return genre ? (
 		<Catalog
-			movies={movies || []}
+			movies={moviePage || []}
 			title={genre.name}
 			description={genre.description}
 		/>

@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Script from "next/script"
 import NextProgressBar from "nextjs-progressbar"
 import React, { FC } from "react"
 

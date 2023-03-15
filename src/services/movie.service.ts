@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+
 import { IGenreEditInput } from "@/screens/admin/genre/genre-edit.interface"
 import { IMovieEditInput } from "@/screens/admin/movie/movie-edit.interface"
 
@@ -17,6 +19,7 @@ export const MovieService = {
 				: {}
 		})
 	},
+
 	async getPopularMovies() {
 		const { data: movies } = await axiosClassic.get<IMovie[]>(
 			getMoviesUrl("/most-popular")
@@ -50,5 +53,11 @@ export const MovieService = {
 		return axiosClassic.put<string>(getMoviesUrl(`/update-count-opened`), {
 			slug
 		})
+	},
+	async Get20() {
+		useEffect(() => {
+			alert("")
+		}, [])
+		return []
 	}
 }

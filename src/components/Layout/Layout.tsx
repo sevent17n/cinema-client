@@ -1,5 +1,6 @@
 import { JSXElement } from "@babel/types"
-import React, { FC, ReactNode } from "react"
+import { getElementById } from "domutils"
+import React, { FC, ReactNode, useEffect } from "react"
 
 import styles from "./Layout.module.scss"
 import Navigation from "./Navigation/Navigation"

@@ -57,6 +57,14 @@ const GenreEdit = () => {
 								error={errors.name}
 								style={{ width: "31%" }}
 							/>
+							<Field
+								{...register("icon", {
+									required: "Icon is required"
+								})}
+								placeholder={"Icon"}
+								error={errors.icon}
+								style={{ width: "31%" }}
+							/>
 							<div style={{ width: "31%" }}>
 								<SlugField
 									register={register}

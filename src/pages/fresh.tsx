@@ -1,36 +1,43 @@
-import { GetStaticProps, NextPage } from "next"
-import React from "react"
-
 import Catalog from "@/ui/catalog-movies/Catalog"
+import Button from "@/ui/form-elements/Button"
+import Pagination from "@/ui/pagination/Pagination"
+import { usePagination } from "@/ui/pagination/usePagination"
 
-import { IMovie } from "@/shared/types/movie.types"
-
-import { MovieService } from "@/services/movie.service"
-
-const FreshPage: NextPage<{ movies: IMovie[] }> = ({ movies }) => {
+const FreshPage = () => {
+	const { isLoading, page, movies, setPage, scrollToTop } = usePagination()
 	return (
-		<Catalog
-			movies={movies || []}
-			title={"Fresh Movies"}
-			description={
-				"Какие то ебаные фильмы, рот их ебал. Как меня все заебало3, идите науй"
-			}
-		/>
+		!isLoading &&
+		movies && (
+			<>
+				<Catalog
+					movies={movies}
+					title={"Fresh Movies"}
+					description={"Какие то  фильмы"}
+				/>
+				<Pagination
+					movies={movies}
+					page={page}
+					setPage={setPage}
+					scrollToTop={scrollToTop}
+				/>
+			</>
+		)
 	)
 }
-export const getStaticProps: GetStaticProps = async () => {
-	try {
-		const { data: movies } = await MovieService.getAll()
-		return {
-			props: {
-				movies
-			},
-			revalidate: 60
-		}
-	} catch (error) {
-		return {
-			notFound: true
-		}
-	}
-}
+
+// export const getStaticProps: GetStaticProps = async () => {
+// 	try {
+// 		const { data: movies } = await MovieService.getAll()
+// 		return {
+// 			props: {
+// 				movies
+// 			},
+// 			revalidate: 60
+// 		}
+// 	} catch (error) {
+// 		return {
+// 			notFound: true
+// 		}
+// 	}
+// }
 export default FreshPage

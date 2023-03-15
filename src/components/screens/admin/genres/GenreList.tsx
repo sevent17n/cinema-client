@@ -31,7 +31,7 @@ const GenreList = () => {
 			<AdminTable
 				tableItems={data || []}
 				isLoading={isLoading}
-				headerItems={["Title", "Slug"]}
+				headerItems={["Title", "Slug", "Icon"]}
 				removeHandler={deleteAsync}
 			/>
 		</>

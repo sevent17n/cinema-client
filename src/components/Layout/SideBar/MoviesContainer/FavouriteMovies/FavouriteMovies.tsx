@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { FC } from "react"
 
 import { useFavorites } from "@/screens/favourites/useFavorites"
