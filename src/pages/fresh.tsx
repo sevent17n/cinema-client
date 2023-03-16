@@ -12,7 +12,7 @@ const FreshPage = () => {
 				<Catalog
 					movies={movies}
 					title={"Fresh Movies"}
-					description={"Какие то  фильмы"}
+					description={"Какие то фильмы"}
 				/>
 				<Pagination
 					movies={movies}
