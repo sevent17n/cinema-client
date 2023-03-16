@@ -44,6 +44,8 @@ export interface IMovie {
 
 	videoUrl: string
 
+	kinopoiskId: number
+
 	genres: IGenre[]
 
 	actors: IActor[]

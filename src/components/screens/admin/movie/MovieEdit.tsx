@@ -65,9 +65,17 @@ const MovieEdit = () => {
 								})}
 								placeholder={"Title"}
 								error={errors.title}
-								style={{ width: "41%" }}
+								style={{ width: "31%" }}
 							/>
-							<div style={{ width: "51%" }}>
+							<Field
+								{...register("kinopoiskId", {
+									required: "Id кинопоиска is обязательно"
+								})}
+								placeholder={"Kinopoisk Id"}
+								error={errors.kinopoiskId}
+								style={{ width: "31%" }}
+							/>
+							<div style={{ width: "31%" }}>
 								<SlugField
 									register={register}
 									generate={() => {
@@ -214,29 +222,6 @@ const MovieEdit = () => {
 								}}
 							/>
 						</div>
-						<Controller
-							control={control}
-							name={"videoUrl"}
-							defaultValue={""}
-							render={({
-								field: { value, onChange },
-								fieldState: { error }
-							}) => (
-								<UploadFile
-									onChange={onChange}
-									placeholder={"Video"}
-									error={error}
-									value={value}
-									folder={"movies"}
-								/>
-							)}
-							rules={{
-								validate: {
-									required: (v) =>
-										(v && stripHtml(v).result.length > 0) || "Video required"
-								}
-							}}
-						/>
 
 						<Button>Update</Button>
 					</>

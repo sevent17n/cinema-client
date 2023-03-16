@@ -1,9 +1,10 @@
 import Script from "next/script"
+import { FC } from "react"
 
-const VideoPlayer = () => {
+const VideoPlayer: FC<{ kinopoiskId: number }> = ({ kinopoiskId }) => {
 	return (
 		<div className={"mt-14"}>
-			<div id="yohoho" data-kinopoisk="361" />
+			<div id="yohoho" data-kinopoisk={kinopoiskId} />
 		</div>
 	)
 }
