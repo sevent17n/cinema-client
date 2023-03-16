@@ -1,4 +1,3 @@
-import Script from "next/script"
 import { FC } from "react"
 
 const VideoPlayer: FC<{ kinopoiskId: number }> = ({ kinopoiskId }) => {

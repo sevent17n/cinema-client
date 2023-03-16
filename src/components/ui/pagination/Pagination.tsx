@@ -8,8 +8,8 @@ import { IMovie } from "@/shared/types/movie.types"
 import styles from "./Pagination.module.scss"
 
 interface IPaginationProps {
-	setPage: <T>(arg0: T) => number
-	movies: IMovie[]
+	setPage: any
+	movies: IMovie[] | undefined
 	page: number
 	scrollToTop: () => void
 }
@@ -30,7 +30,7 @@ const Pagination: FC<IPaginationProps> = ({
 					PrevPage
 				</Button>
 			)}
-			{movies.length < 18 ? null : (
+			{movies && movies.length < 18 ? null : (
 				<Button
 					onClick={() => {
 						setPage((prev: number) => prev + 18), scrollToTop()

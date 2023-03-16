@@ -1,8 +1,6 @@
-import axios from "axios"
 import dynamic from "next/dynamic"
 import Script from "next/script"
 import React, { FC, useEffect } from "react"
-import { useQuery } from "react-query"
 
 import Content from "@/screens/singleMovie/content/Content"
 import { useUpdateCountOpened } from "@/screens/singleMovie/useUpdateCountOpened"
@@ -12,11 +10,8 @@ import Gallery from "@/ui/gallery/Gallery"
 import SubHeading from "@/ui/heading/SubHeading"
 import VideoPlayer from "@/ui/video-player/VideoPlayer"
 
-import { MovieService } from "@/services/movie.service"
-
 import Meta from "@/utils/meta/Meta"
 
-import { API_SERVER_URL } from "../../../config/api.config"
 import { IMoviePage } from "../../../pages/movies/[slug]"
 
 const DynamicRate = dynamic(

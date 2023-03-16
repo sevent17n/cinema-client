@@ -7,12 +7,12 @@ import { IMovie } from "@/shared/types/movie.types"
 import { axiosClassic } from "../../../api/interceptors"
 import { API_SERVER_URL, APP_URL } from "../../../config/api.config"
 
-export const usePagination = () => {
+export const usePagination = (url: string) => {
 	const [page, setPage] = useState<number>(0)
 
 	const getMovies = async (skip = 0) => {
 		const { data } = await axiosClassic.get<IMovie[]>(
-			`${API_SERVER_URL}/movies?limit=18&page=${skip}`
+			`${API_SERVER_URL}/${url}?limit=18&page=${skip}`
 		)
 		return data
 	}

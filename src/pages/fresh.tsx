@@ -1,10 +1,10 @@
 import Catalog from "@/ui/catalog-movies/Catalog"
-import Button from "@/ui/form-elements/Button"
 import Pagination from "@/ui/pagination/Pagination"
 import { usePagination } from "@/ui/pagination/usePagination"
 
 const FreshPage = () => {
-	const { isLoading, page, movies, setPage, scrollToTop } = usePagination()
+	const { isLoading, page, movies, setPage, scrollToTop } =
+		usePagination("movies")
 	return (
 		!isLoading &&
 		movies && (

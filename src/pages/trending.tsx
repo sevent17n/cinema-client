@@ -2,22 +2,33 @@ import { GetStaticProps, NextPage } from "next"
 import React from "react"
 
 import Catalog from "@/ui/catalog-movies/Catalog"
+import Pagination from "@/ui/pagination/Pagination"
 import { usePagination } from "@/ui/pagination/usePagination"
-
-import { IMovie } from "@/shared/types/movie.types"
 
 import { MovieService } from "@/services/movie.service"
 
-const TrendingPage: NextPage<{ movies: IMovie[] }> = ({ movies }) => {
-	const moviePage = usePagination()
+const TrendingPage = () => {
+	const { isLoading, page, movies, setPage, scrollToTop } = usePagination(
+		"movies/most-popular"
+	)
 	return (
-		<Catalog
-			movies={moviePage || []}
-			title={
-				"Популярная хуета, но не такая популярная как я среди усатых девственниц"
-			}
-			description={"Еще одна подборка блядских фильмов, все заебало"}
-		/>
+		<>
+			{!isLoading && (
+				<>
+					<Catalog
+						movies={movies || []}
+						title={"Популярное"}
+						description={"Еще один миллион подборок фильмов "}
+					/>
+					<Pagination
+						movies={movies}
+						page={page}
+						setPage={setPage}
+						scrollToTop={scrollToTop}
+					/>
+				</>
+			)}
+		</>
 	)
 }
 export const getStaticProps: GetStaticProps = async () => {

@@ -1,28 +1,39 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next"
-import React from "react"
 
 import Catalog from "@/ui/catalog-movies/Catalog"
-import { usePagination } from "@/ui/pagination/usePagination"
+import Pagination from "@/ui/pagination/Pagination"
+import { useGenrePagination } from "@/ui/pagination/useGenrePagination"
 
 import { IGenre, IMovie } from "@/shared/types/movie.types"
 
 import { GenreService } from "@/services/genre.service"
-import { MovieService } from "@/services/movie.service"
 
 import Error404 from "../404"
 
 interface IGenrePage {
 	movies: IMovie[]
-	genre: IGenre | undefined
+	genre: IGenre
 }
-const GenrePage: NextPage<IGenrePage> = ({ movies, genre }) => {
-	const moviePage = usePagination()
+const GenrePage: NextPage<IGenrePage> = ({ genre }) => {
+	const { isLoading, page, movies, setPage, scrollToTop } = useGenrePagination(
+		genre._id
+	)
+
+	console.log(movies, genre._id)
 	return genre ? (
-		<Catalog
-			movies={moviePage || []}
-			title={genre.name}
-			description={genre.description}
-		/>
+		<>
+			<Catalog
+				movies={movies || []}
+				title={genre.name}
+				description={genre.description}
+			/>
+			<Pagination
+				setPage={setPage}
+				movies={movies}
+				page={page}
+				scrollToTop={scrollToTop}
+			/>
+		</>
 	) : (
 		<Error404 />
 	)
@@ -44,11 +55,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	try {
 		const { data: genre } = await GenreService.getBySlug(String(params?.slug))
-		const { data: movies } = await MovieService.getByGenres([genre._id])
 		return {
 			props: {
-				genre,
-				movies
+				genre
 			},
 			revalidate: 60
 		}
