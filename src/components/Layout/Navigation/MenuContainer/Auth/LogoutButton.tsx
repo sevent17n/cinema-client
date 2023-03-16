@@ -18,7 +18,7 @@ const LogoutButton = () => {
 		<li>
 			<a onClick={logoutHandler}>
 				<MaterialIcon name="MdLogout" />
-				<span>Logout</span>
+				<span>Выйти</span>
 			</a>
 		</li>
 	)

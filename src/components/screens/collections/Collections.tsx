@@ -9,8 +9,8 @@ import CollectionItem from "./CollectionItem"
 import styles from "./Collections.module.scss"
 import { ICollection } from "./collections.types"
 
-const title = "Discovery"
-const description = "In this section you will find all genres on our site"
+const title = "Подборки по жанрам"
+const description = "Здесь вы найдете всевозможные жанры и фильмы"
 
 const Collections: FC<{ collections: ICollection[] }> = ({ collections }) => {
 	return (

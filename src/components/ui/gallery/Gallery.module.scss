@@ -10,7 +10,7 @@
 }
 
 .item {
-	@apply relative transition-transform flex items-end shadow-lg rounded-layout overflow-hidden;
+	@apply relative transition-transform flex items-end shadow-lg rounded-layout overflow-hidden ;
 	flex: 0 0 auto;
 
 	&:hover {
@@ -21,10 +21,29 @@
 		@apply mr-4 last:mr-0 w-1/5 h-72;
 		max-width: 200px;
 	}
-
+	@media( max-width: 1750px) {
+		&.vertical {
+			@apply  w-2/5 ;
+		}
+	}
 	&.horizontal {
 		@apply mb-8 h-44;
 		width: 31%;
+	}
+	@media( max-width: 1750px) and (min-width:970px){
+		&.horizontal {
+			width: 29%;
+		}
+	}
+	@media(max-width: 970px) and (min-width:830px){
+		&.horizontal {
+			width: 28%;
+		}
+	}
+	@media(max-width: 830px) {
+		&.horizontal {
+			width: 90%;
+		}
 	}
 
 	&.withText {
@@ -49,4 +68,5 @@
 			@apply text-gray-500 text-shadow;
 		}
 	}
+
 }

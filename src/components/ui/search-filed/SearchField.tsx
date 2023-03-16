@@ -14,7 +14,7 @@ const SearchField: FC<ISearchField> = ({ searchTerm, handleSearch }) => {
 			<MaterialIcon name={"MdSearch"} />
 			<input
 				type="text"
-				placeholder={"Search"}
+				placeholder={"Поиск"}
 				value={searchTerm}
 				onChange={handleSearch}
 			/>

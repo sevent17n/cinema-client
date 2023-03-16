@@ -5,7 +5,9 @@ $shadow: 0 10px 10px 0 rgb(0 0 0 / 15%), 0 6px 6px 0 rgb(0 0 0 / 15%),
 
 .collections {
 	@apply flex flex-wrap items-center mt-10;
-
+	@media(max-width:865px){
+		@apply flex-col items-start;
+	}
 	> a {
 		@apply mr-8 animate-fade;
 	}
@@ -18,6 +20,15 @@ $shadow: 0 10px 10px 0 rgb(0 0 0 / 15%), 0 6px 6px 0 rgb(0 0 0 / 15%),
 .collection {
 	@apply relative flex items-end mb-10 h-44 transition-transform;
 	width: 31%;
+	@media(max-width:1700px){
+		width: 30%;
+	}
+	@media(max-width:1230px){
+		width: 28%;
+	}
+	@media(max-width:865px){
+		width:100%;
+	}
 
 	@include fade-bg-gradient(0deg);
 	&::before {

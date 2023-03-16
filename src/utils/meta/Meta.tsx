@@ -25,7 +25,7 @@ const Meta: FC<ISeo> = ({ title, description, image }) => {
 							content={onlyText(description, 152)}
 						/>
 						<link rel={"canonical"} href={currentUrl} />
-						<meta property={"og:locale"} content="en" />
+						<meta property={"og:locale"} content="ru" />
 						<meta property={"og:title"} content={titleMerge(title)} />
 						<meta property={"og:url"} content={currentUrl} />
 						<meta property={"og:image"} content={image || logoImage} />

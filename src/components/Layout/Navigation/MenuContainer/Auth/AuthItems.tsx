@@ -18,7 +18,7 @@ const AuthItems: FC = () => {
 						item={{
 							icon: "MdOutlinePermIdentity",
 							link: "/profile",
-							title: "Profile"
+							title: "Профиль"
 						}}
 					/>
 					<LogoutButton />
@@ -29,7 +29,7 @@ const AuthItems: FC = () => {
 						item={{
 							icon: "MdOutlinePermIdentity",
 							link: "/AuthPage",
-							title: "Login"
+							title: "Войти"
 						}}
 					/>
 				</>

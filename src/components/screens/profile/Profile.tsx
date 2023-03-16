@@ -21,9 +21,9 @@ const Profile = () => {
 	const { isLoading, onSubmit } = useProfile(setValue)
 	return (
 		<>
-			<Meta title={"Profile"}></Meta>
+			<Meta title={"Профиль"}></Meta>
 			<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-				<Heading title={"Profile"} className={"mb-6"} />
+				<Heading title={"Профиль"} className={"mb-6"} />
 				{isLoading ? (
 					<SkeletonLoader count={2} />
 				) : (

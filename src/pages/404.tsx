@@ -5,11 +5,11 @@ import Meta from "@/utils/meta/Meta"
 export default function Error404() {
 	return (
 		<>
-			<Meta title={"Page not found"}>
-				<Heading title={"404 - Page Not Found"} />
+			<Meta title={"Страница не найдена"}>
+				<Heading title={"404 - Страница не найдена"} />
 			</Meta>
 			<div className={"text-3xl text-white text-center "}>
-				404 - Page Not Found
+				404 - Страница не найдена
 			</div>
 		</>
 	)

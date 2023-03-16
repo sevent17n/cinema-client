@@ -21,7 +21,7 @@ const FavouriteMovies: FC = () => {
 	) : (
 		<MovieList
 			movies={favoritesMovies?.slice(0, 3) || []}
-			title={"Favourite movies"}
+			title={"Избранное"}
 			link={"/favourites"}
 		/>
 	)

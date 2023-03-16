@@ -20,11 +20,7 @@ const PopularMovies = () => {
 			<SkeletonLoader count={3} className={"h-28 mb-4"} />
 		</div>
 	) : (
-		<MovieList
-			link={"/trending"}
-			movies={data || []}
-			title={"Popular MovieList"}
-		/>
+		<MovieList link={"/trending"} movies={data || []} title={"Популярное"} />
 	)
 }
 

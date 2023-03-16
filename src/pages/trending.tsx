@@ -18,7 +18,7 @@ const TrendingPage = () => {
 					<Catalog
 						movies={movies || []}
 						title={"Популярное"}
-						description={"Еще один миллион подборок фильмов "}
+						description={"Трендовые фильмы и сериалы"}
 					/>
 					<Pagination
 						movies={movies}

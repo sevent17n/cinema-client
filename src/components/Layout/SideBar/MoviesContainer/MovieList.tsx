@@ -14,7 +14,7 @@ const MovieList: FC<IMovieList> = ({ link, title, movies }) => {
 				<MovieItem key={movie._id} movie={movie} />
 			))}
 			<Link href={link}>
-				<a className={styles.button}>See more</a>
+				<a className={styles.button}>Больше</a>
 			</Link>
 		</div>
 	)

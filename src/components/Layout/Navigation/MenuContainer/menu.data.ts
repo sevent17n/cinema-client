@@ -1,27 +1,27 @@
 import { IMenu } from "@/components/Layout/Navigation/MenuContainer/menu.interface"
 
 export const firstMenu: IMenu = {
-	title: "Menu",
+	title: "Меню",
 	items: [
 		{
 			icon: "MdHome",
 			link: "/",
-			title: "Home"
+			title: "Домой"
 		},
 		{
 			icon: "MdExplore",
 			link: "/discovery",
-			title: "Discovery"
+			title: "Подборки по жанрам"
 		},
 		{
 			icon: "MdRefresh",
 			link: "/fresh",
-			title: "Fresh movies"
+			title: "Новинки"
 		},
 		{
 			icon: "MdLocalFireDepartment",
 			link: "/trending",
-			title: "Trending now"
+			title: "Популярное"
 		}
 	]
 }

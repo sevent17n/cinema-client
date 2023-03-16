@@ -45,7 +45,7 @@ const SingleMovie: FC<IMoviePage> = ({ movie, similarMovies }) => {
 			/>
 			<VideoPlayer kinopoiskId={movie.kinopoiskId} />
 			<div className={"mt-12"}>
-				<SubHeading title={"Similar movies"} />
+				<SubHeading title={"Похожие фильмы"} />
 				<Gallery items={similarMovies} />
 			</div>
 			<DynamicRate slug={movie.slug} _id={movie._id} />

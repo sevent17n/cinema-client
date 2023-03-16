@@ -13,7 +13,7 @@ const GenreMenu: FC = () => {
 			<SkeletonLoader count={5} className={"h-7 mt-6"} />
 		</div>
 	) : (
-		<Menu menu={{ title: "Popular genres", items: data || [] }} />
+		<Menu menu={{ title: "Популярные жанры", items: data || [] }} />
 	)
 }
 

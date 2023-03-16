@@ -15,18 +15,18 @@ import { IHome } from "./home.interface"
 const Home: FC<IHome> = ({ slides, trendingMovies, actors }) => {
 	return (
 		<>
-			<Meta title={"Watch movies online"} description={"Free movies"} />
+			<Meta title={"Главная"} description={"Free movies"} />
 			<Heading
-				title={"Watch movies online"}
+				title={"Смотрите фильмы онлайн"}
 				className={"text-gray-300 mb-8 text-xl"}
 			/>
-			{slides.length && <Slider slides={slides} buttonTitle={"Watch"} />}
+			{slides.length && <Slider slides={slides} buttonTitle={"Смотреть"} />}
 			<div className={"my-10"}>
-				<SubHeading title={"Trending now"} />
+				<SubHeading title={"В тренде"} />
 				{trendingMovies.length && <Gallery items={trendingMovies} />}
 			</div>
 			<div className={"my-10"}>
-				<SubHeading title={"Best actor"} />
+				<SubHeading title={"Лучшие актеры"} />
 				{actors.length && <Gallery items={actors} />}
 			</div>
 		</>
