@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic"
-import React, { FC } from "react"
+import { FC } from "react"
 
 import MenuItem from "@/components/Layout/Navigation/MenuContainer/MenuItem"
 import { IMenu } from "@/components/Layout/Navigation/MenuContainer/menu.interface"

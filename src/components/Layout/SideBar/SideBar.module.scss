@@ -1,3 +1,11 @@
+@import "src/assets/styles/adaptive";
 .sidebar {
   @apply p-layout;
+  @include _900{
+    display: none;
+  }
+  @include _1440{
+    padding-left:15px;
+    padding-right:15px;
+  }
 }

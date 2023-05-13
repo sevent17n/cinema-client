@@ -19,5 +19,10 @@ const nextConfig = {
 		]
 	}
 }
-
+module.exports = {
+	images: {
+		domains: ["kinopoiskapiunofficial.tech"],
+		formats: ["image/avif", "image/webp"]
+	}
+}
 module.exports = nextConfig

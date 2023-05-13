@@ -1,3 +1,4 @@
+@import "src/assets/styles/adaptive";
 .list {
 	@apply mt-11 animate-fade;
 
@@ -14,8 +15,9 @@
 
 		> a {
 			img {
-				@apply rounded-image transition-colors;
+				@apply rounded-image  transition-colors;
 				border: 1px solid transparent !important;
+
 			}
 
 			&:hover {

@@ -1,0 +1,11 @@
+@import "src/assets/styles/adaptive";
+.header{
+  display: none;
+  @include _900{
+    @apply px-layout pt-10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}

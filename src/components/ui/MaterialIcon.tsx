@@ -1,5 +1,4 @@
 import { FC } from "react"
-import { IconType } from "react-icons/lib"
 import * as MaterialIcons from "react-icons/md"
 
 import { useRenderClient } from "@/hooks/useRenderClient"

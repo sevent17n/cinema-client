@@ -34,7 +34,7 @@ const SingleMovie: FC<IMoviePage> = ({ movie, similarMovies }) => {
 		script.crossOrigin = "anonymous"
 		document.body.append(script)
 	}, [])
-
+	console.log(movie)
 	return (
 		<>
 			<Script src={"https://yohoho.cc/yo.js"} />

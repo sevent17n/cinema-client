@@ -1,6 +1,5 @@
 import React from "react"
 
-import AuthItems from "@/components/Layout/Navigation/MenuContainer/Auth/AuthItems"
 import Menu from "@/components/Layout/Navigation/MenuContainer/Menu"
 import GenreMenu from "@/components/Layout/Navigation/MenuContainer/genres/GenreMenu"
 import {

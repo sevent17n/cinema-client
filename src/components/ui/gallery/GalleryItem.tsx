@@ -17,13 +17,7 @@ const GalleryItem: FC<IGalleryItemProps> = ({ item, variant }) => {
 					[styles.vertical]: variant === "vertical"
 				})}
 			>
-				<Image
-					alt={item.name}
-					src={item.posterPath}
-					layout="fill"
-					draggable={false}
-					priority
-				/>
+				<img alt={item.name} src={item.posterPath} draggable={false} />
 				{item.content && (
 					<div className={styles.content}>
 						<div className={styles.title}>{item.content.title}</div>

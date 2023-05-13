@@ -1,3 +1,4 @@
+@import "src/assets/styles/adaptive";
 $bar-width: 20%;
 
 .layout {
@@ -17,6 +18,9 @@ $bar-width: 20%;
 	> .center {
 		@apply min-h-screen p-layout;
 		margin: 0 $bar-width;
+		@include _900{
+			margin:0;
+		}
 	}
 
 	> div:last-child {

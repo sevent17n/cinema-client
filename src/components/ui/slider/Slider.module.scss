@@ -1,4 +1,5 @@
 @import '../../../assets/styles/variables';
+@import "src/assets/styles/adaptive";
 
 .slider {
 	@apply relative mx-auto;
@@ -26,6 +27,13 @@
 
 			.button {
 				@apply btn-primary p-2 px-10;
+				@include _480{
+					@apply p-2 px-5;
+				}
+				@include _360{
+					@apply p-2 px-8;
+					margin-bottom:50px;
+				}
 			}
 		}
 	}

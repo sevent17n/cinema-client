@@ -1,6 +1,9 @@
+@import "src/assets/styles/adaptive";
 .wrapper {
 	@apply w-1/2 mx-auto my-10 air-block p-7 text-center;
-
+	@include _480{
+		@apply w-full;
+	}
 	> h3 {
 		@apply text-2xl font-semibold;
 	}

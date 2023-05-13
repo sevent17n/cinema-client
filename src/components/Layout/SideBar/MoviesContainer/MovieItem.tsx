@@ -17,13 +17,14 @@ const MovieItem: FC<{ movie: IMovie }> = ({ movie }) => {
 		<div className={styles.item}>
 			<Link href={getMovieUrl(movie.slug)}>
 				<a>
-					<Image
+					<img
 						draggable={false}
 						alt={movie.title}
-						width={65}
-						height={97}
+						width={66}
+						height={100}
 						src={movie.poster}
-						priority
+						// priority
+						className={styles.image}
 					/>
 				</a>
 			</Link>
